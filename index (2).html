@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Hasan | Supply Chain · Operations · Compliance Consultant</title>
+<meta name="description" content="Senior Supply Chain, Operations, Procurement & Compliance Consultant based in Erbil, Iraq. 20+ years of experience across Iraq and internationally.">
+<meta name="keywords" content="Supply Chain Consultant Iraq, Procurement Consultant, Logistics Consultant Iraq, Compliance Specialist, Operations Management Consultant, Internal Controls Consultant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #0f2040;
+    --navy-light: #1a305a;
+    --navy-accent: #1e3a6e;
+    --gold: #c9a84c;
+    --gold-light: #e2c47a;
+    --gold-pale: #f5e6c0;
+    --white: #ffffff;
+    --off-white: #f8f6f1;
+    --text-muted: #8a96ab;
+    --border: rgba(201,168,76,0.2);
+    --card-bg: rgba(255,255,255,0.04);
+    --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    padding: 0 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(10,22,40,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+  }
+
+  nav.scrolled {
+    height: 60px;
+    background: rgba(10,22,40,0.99);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+  }
+
+  .nav-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .nav-brand span { color: var(--gold); }
+
+  .nav-logo-mark {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 0.15rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.75rem;
+    transition: var(--transition);
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: 0; left: 50%; right: 50%;
+    height: 1px; background: var(--gold);
+    transition: var(--transition);
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { left: 0.75rem; right: 0.75rem; }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 0.4rem 1rem !important;
+    font-weight: 600 !important;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+  .hamburger { display: none; cursor: pointer; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--gold); margin: 5px 0; transition: var(--transition); }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      linear-gradient(135deg, rgba(10,22,40,0.93) 0%, rgba(10,22,40,0.78) 50%, rgba(10,22,40,0.88) 100%),
+      url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1800&q=80') center/cover no-repeat;
+  }
+
+  .hero-grid-overlay {
+    position: absolute; inset: 0;
+    background-image: 
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    top: 50%; left: 60%; transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 4rem 2.5rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow-line { width: 40px; height: 1px; background: var(--gold); }
+
+  .hero-eyebrow span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .hero-h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-divider {
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    color: var(--gold-light);
+    padding: 0.35rem 0.8rem;
+  }
+
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border: 2px solid var(--gold);
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--gold);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* Hero stats */
+  .hero-stats {
+    display: flex; flex-direction: column; gap: 1.5rem;
+    border-left: 1px solid var(--border);
+    padding-left: 3rem;
+  }
+
+  .hero-stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .hero-stat-divider { width: 40px; height: 1px; background: var(--border); }
+
+  /* ── SECTION WRAPPER ── */
+  section { padding: 6rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+
+  .section-eyebrow {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .section-eyebrow-line { width: 30px; height: 1px; background: var(--gold); }
+
+  .section-eyebrow span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-intro {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+    max-width: 560px;
+    margin-bottom: 3rem;
+  }
+
+  /* ── TICKER ── */
+  .ticker-wrap {
+    width: 100%;
+    background: var(--navy-mid);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    padding: 0.75rem 0;
+  }
+
+  .ticker {
+    display: flex; gap: 4rem;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  .ticker-item {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .ticker-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+
+  .about-portrait {
+    position: relative;
+  }
+
+  .about-portrait-frame {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--navy-mid);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .about-portrait-placeholder {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    font-weight: 300;
+    color: var(--border);
+    letter-spacing: 0.05em;
+  }
+
+  .about-portrait-corner {
+    position: absolute;
+    width: 30px; height: 30px;
+  }
+
+  .about-portrait-corner.tl { top: -1px; left: -1px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
+  .about-portrait-corner.tr { top: -1px; right: -1px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+  .about-portrait-corner.bl { bottom: -1px; left: -1px; border-bottom: 2px solid var(--gold); border-left: 2px solid var(--gold); }
+  .about-portrait-corner.br { bottom: -1px; right: -1px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+
+  .about-badge {
+    position: absolute; bottom: -1.5rem; right: -1.5rem;
+    width: 120px; height: 120px;
+    background: var(--gold);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+
+  .about-badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .about-badge-text {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy-mid);
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+
+  .about-strengths {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .strength-item {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    transition: var(--transition);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .strength-item:hover { border-color: var(--gold); color: var(--white); }
+
+  .strength-dot { width: 5px; height: 5px; background: var(--gold); flex-shrink: 0; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--navy-mid); max-width: 100%; padding: 6rem 0; }
+  #services > .inner { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .service-card {
+    background: var(--navy-mid);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: default;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: var(--transition);
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: var(--navy-light); }
+
+  .service-icon {
+    width: 50px; height: 50px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--gold);
+    font-size: 1.4rem;
+  }
+
+  .service-num {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--border);
+  }
+
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+  }
+
+  .service-desc {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .service-link {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem;
+    transition: var(--transition);
+  }
+
+  .service-link:hover { gap: 0.75rem; }
+
+  /* ── INDUSTRIES ── */
+  .industries-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+
+  .industry-card {
+    border: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--card-bg);
+    transition: var(--transition);
+    cursor: default;
+  }
+
+  .industry-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+
+  .industry-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .industry-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .industry-sub { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ── EXPERIENCE STRIP ── */
+  #experience { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%); max-width: 100%; padding: 6rem 0; }
+  #experience > .inner { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+
+  .experience-timeline {
+    display: flex; flex-direction: column; gap: 1rem;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .experience-timeline::before {
+    content: '';
+    position: absolute; left: 11px; top: 0; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+
+  .exp-item {
+    display: flex; gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    background: var(--card-bg);
+    transition: var(--transition);
+    padding-left: 3rem;
+    position: relative;
+  }
+
+  .exp-item::before {
+    content: '';
+    position: absolute; left: 7px; top: 2rem;
+    width: 9px; height: 9px;
+    border: 1px solid var(--gold);
+    background: var(--navy-mid);
+    transform: rotate(45deg);
+  }
+
+  .exp-item:hover { border-color: var(--border); }
+
+  .exp-period {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    min-width: 120px;
+    padding-top: 0.2rem;
+  }
+
+  .exp-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .exp-org { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .exp-tag {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    color: rgba(255,255,255,0.5);
+    padding: 0.2rem 0.55rem;
+  }
+
+  /* ── CERTIFICATIONS ── */
+  .certs-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+  }
+
+  .cert-card {
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--card-bg);
+    transition: var(--transition);
+  }
+
+  .cert-card:hover { border-color: var(--gold); }
+
+  .cert-badge {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .cert-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  .cert-body { font-size: 0.78rem; color: var(--text-muted); }
+
+  .cert-status {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.4rem;
+  }
+
+  .cert-status.active { background: rgba(201,168,76,0.15); color: var(--gold); }
+  .cert-status.progress { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border); }
+
+  /* ── ARTICLES ── */
+  #articles { background: var(--navy-mid); max-width: 100%; padding: 6rem 0; }
+  #articles > .inner { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+
+  .articles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+
+  .article-card {
+    border: 1px solid var(--border);
+    background: var(--navy);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+
+  .article-card:hover { border-color: var(--gold); }
+
+  .article-thumb {
+    height: 160px;
+    background: var(--navy-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+    color: var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-cat {
+    position: absolute; top: 1rem; left: 1rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.2rem 0.6rem;
+  }
+
+  .article-body { padding: 1.5rem; }
+
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+    color: var(--white);
+  }
+
+  .article-excerpt { font-size: 0.8rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 1rem; }
+
+  .article-meta {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── RESOURCES ── */
+  .resources-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  }
+
+  .resource-card {
+    border: 1px solid var(--border);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background: var(--card-bg);
+    transition: var(--transition);
+    cursor: pointer;
+  }
+
+  .resource-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+
+  .resource-icon { font-size: 1.75rem; margin-bottom: 1rem; display: block; }
+
+  .resource-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: var(--white);
+  }
+
+  .resource-type { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+  .resource-dl {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--navy-mid); max-width: 100%; padding: 6rem 0; }
+  #contact > .inner { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .contact-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    transition: var(--transition);
+  }
+
+  .contact-item:hover { border-color: var(--gold); }
+
+  .contact-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+
+  .contact-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+  .contact-value { font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+
+  .contact-form {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .form-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .form-input, .form-textarea, .form-select {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    transition: var(--transition);
+    width: 100%;
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.04);
+  }
+
+  .form-textarea { min-height: 120px; resize: vertical; }
+
+  .form-submit {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    align-self: flex-start;
+  }
+
+  .form-submit:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050d1a;
+    border-top: 1px solid var(--border);
+    padding: 3rem 2.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .footer-brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-brand-name span { color: var(--gold); }
+
+  .footer-tagline { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; }
+
+  .social-links { display: flex; gap: 0.75rem; }
+
+  .social-link {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+  .footer-col-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
+  .footer-links a {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    padding-top: 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .footer-copyright { font-size: 0.76rem; color: rgba(255,255,255,0.25); }
+  .footer-domain { font-size: 0.76rem; color: var(--gold); opacity: 0.7; font-family: 'Cinzel', serif; letter-spacing: 0.05em; }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-wrap {
+    background: linear-gradient(135deg, var(--navy-accent), var(--navy-mid));
+    border: 1px solid var(--border);
+    padding: 3rem;
+    display: flex; align-items: center; gap: 3rem;
+    margin: 4rem 0 0;
+  }
+
+  .newsletter-text { flex: 1; }
+
+  .newsletter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+
+  .newsletter-sub { font-size: 0.85rem; color: var(--text-muted); }
+
+  .newsletter-form { display: flex; gap: 0; flex: 1; }
+
+  .newsletter-input {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    border-right: none;
+    color: var(--white);
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+  }
+
+  .newsletter-btn {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 0.85rem 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+
+  /* ── COUNTERS ── */
+  .counter-strip {
+    background: rgba(201,168,76,0.06);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .counter-strip-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 3rem 2.5rem;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+
+  .counter-item {
+    padding: 1rem;
+    border-right: 1px solid var(--border);
+  }
+
+  .counter-item:last-child { border-right: none; }
+
+  .counter-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+
+  .counter-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  /* ── TESTIMONIAL ── */
+  .testimonial-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial-card {
+    border: 1px solid var(--border);
+    padding: 2rem;
+    background: var(--card-bg);
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute; top: 1rem; left: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .testimonial-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+
+  .testimonial-avatar {
+    width: 40px; height: 40px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--gold);
+  }
+
+  .testimonial-name { font-size: 0.85rem; font-weight: 600; }
+  .testimonial-title { font-size: 0.75rem; color: var(--text-muted); }
+
+  /* ── MOBILE ── */
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+    background: rgba(10,22,40,0.98);
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+  }
+
+  .mobile-menu a:hover { color: var(--gold); border-color: var(--border); }
+
+  @media (max-width: 1024px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-stats { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 2rem; flex-direction: row; flex-wrap: wrap; gap: 2rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-portrait { max-width: 340px; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .industries-grid { grid-template-columns: repeat(2, 1fr); }
+    .articles-grid { grid-template-columns: 1fr 1fr; }
+    .resources-grid { grid-template-columns: repeat(2, 1fr); }
+    .counter-strip-inner { grid-template-columns: 1fr 1fr; }
+    .counter-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .counter-item:nth-child(odd) { border-right: 1px solid var(--border); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .newsletter-wrap { flex-direction: column; gap: 1.5rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .quran-grid { grid-template-columns: 1fr; }
+    .certs-grid { grid-template-columns: 1fr; }
+    .testimonial-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1.25rem; }
+    section, #services > .inner, #experience > .inner, #articles > .inner, #contact > .inner, #quran > .inner { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .hero-content { padding: 3rem 1.25rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .industries-grid { grid-template-columns: 1fr; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .resources-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .about-strengths { grid-template-columns: 1fr; }
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="main-nav">
+  <a href="#home" class="nav-brand">
+    <div class="nav-logo-mark">AH</div>
+    Ahmed <span>Hasan</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Credentials</a></li>
+    <li><a href="#articles">Insights</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#clients" onclick="closeMenu()">Clients</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#industries" onclick="closeMenu()">Industries</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#certifications" onclick="closeMenu()">Credentials</a>
+  <a href="#articles" onclick="closeMenu()">Insights</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home" style="padding:0; max-width:100%; margin:0;">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>Erbil, Kurdistan Region, Iraq</span>
+      </div>
+      <h1 class="hero-h1">
+        Supply Chain<br>
+        <em>Operations &</em>
+        Compliance
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle">
+        Over 20 years of experience in logistics, procurement, operations management, and compliance across Iraq and internationally. Trusted by leading organizations to drive efficiency and ensure integrity.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">Supply Chain</span>
+        <span class="hero-tag">Procurement</span>
+        <span class="hero-tag">Compliance</span>
+        <span class="hero-tag">Risk Management</span>
+        <span class="hero-tag">Process Improvement</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-number" data-target="20">0</div>
+        <div class="hero-stat-label">Years of Experience</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div>
+        <div class="hero-stat-number" data-target="6">0</div>
+        <div class="hero-stat-label">Service Domains</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div>
+        <div class="hero-stat-number" data-target="6">0</div>
+        <div class="hero-stat-label">Industries Served</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div>
+        <div class="hero-stat-number" data-target="3">0</div>
+        <div class="hero-stat-label">Languages: EN · AR · KU</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"><div class="ticker-dot"></div>Supply Chain Management</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Procurement & Contracting</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Compliance & Internal Controls</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Logistics & Operations</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Risk Management</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>SOP Development</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Process Improvement</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Operational Audit</div>
+    <!-- duplicate for loop -->
+    <div class="ticker-item"><div class="ticker-dot"></div>Supply Chain Management</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Procurement & Contracting</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Compliance & Internal Controls</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Logistics & Operations</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Risk Management</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>SOP Development</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Process Improvement</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Operational Audit</div>
+  </div>
+</div>
+
+<!-- COUNTERS -->
+<div class="counter-strip">
+  <div class="counter-strip-inner">
+    <div class="counter-item">
+      <span class="counter-num" data-target="20">0</span>
+      <span class="counter-label">Years Experience</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-num" data-target="5">0</span>
+      <span class="counter-label">Projects Delivered</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-num" data-target="6">0</span>
+      <span class="counter-label">Industries Served</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-num" data-target="3">0</span>
+      <span class="counter-label">Languages</span>
+    </div>
+  </div>
+</div>
+
+<!-- CLIENTS & PARTNERS -->
+<div id="clients" style="background:var(--navy-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:1200px;margin:0 auto;padding:4rem 2.5rem;">
+
+    <!-- Our Clients -->
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:0.75rem;">
+        <div style="width:40px;height:1px;background:#c9a84c;"></div>
+        <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;">Trusted By</span>
+        <div style="width:40px;height:1px;background:#c9a84c;"></div>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:400;color:#fff;">Our <em style="font-style:italic;color:#c9a84c;">Clients</em></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem;">
+      <!-- Remas City -->
+      <div style="border:1px solid rgba(201,168,76,0.2);background:rgba(255,255,255,0.03);padding:2rem 1.5rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>
+        <div style="width:64px;height:64px;border:1px solid rgba(201,168,76,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;background:rgba(201,168,76,0.07);font-size:1.6rem;">🏙️</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#fff;margin-bottom:0.4rem;">Remas City</div>
+        <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.6rem;">Real Estate Development</div>
+        <div style="width:30px;height:1px;background:rgba(201,168,76,0.3);margin:0 auto;"></div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:0.75rem;">Supply Chain & Procurement Consulting</div>
+      </div>
+
+      <!-- Lana City -->
+      <div style="border:1px solid rgba(201,168,76,0.2);background:rgba(255,255,255,0.03);padding:2rem 1.5rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>
+        <div style="width:64px;height:64px;border:1px solid rgba(201,168,76,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;background:rgba(201,168,76,0.07);font-size:1.6rem;">🏗️</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#fff;margin-bottom:0.4rem;">Lana City</div>
+        <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.6rem;">Urban Development Project</div>
+        <div style="width:30px;height:1px;background:rgba(201,168,76,0.3);margin:0 auto;"></div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:0.75rem;">Operations & Compliance Advisory</div>
+      </div>
+
+      <!-- Kingstone -->
+      <div style="border:1px solid rgba(201,168,76,0.2);background:rgba(255,255,255,0.03);padding:2rem 1.5rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>
+        <div style="width:64px;height:64px;border:1px solid rgba(201,168,76,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;background:rgba(201,168,76,0.07);font-size:1.6rem;">🏢</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:#fff;margin-bottom:0.4rem;">Kingstone Project</div>
+        <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.6rem;">Construction & Infrastructure</div>
+        <div style="width:30px;height:1px;background:rgba(201,168,76,0.3);margin:0 auto;"></div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:0.75rem;">Procurement & Logistics Management</div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:3rem;">
+      <div style="flex:1;height:1px;background:rgba(201,168,76,0.15);"></div>
+      <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);">Strategic Partnership</div>
+      <div style="flex:1;height:1px;background:rgba(201,168,76,0.15);"></div>
+    </div>
+
+    <!-- Our Partner -->
+    <div style="text-align:center;margin-bottom:2rem;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:0.75rem;">
+        <div style="width:40px;height:1px;background:#c9a84c;"></div>
+        <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;">Strategic Partner</span>
+        <div style="width:40px;height:1px;background:#c9a84c;"></div>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:400;color:#fff;">Our <em style="font-style:italic;color:#c9a84c;">Partner</em></h2>
+    </div>
+
+    <div style="max-width:480px;margin:0 auto;">
+      <div style="border:1px solid rgba(201,168,76,0.35);background:linear-gradient(135deg,rgba(201,168,76,0.07),rgba(255,255,255,0.02));padding:2.5rem 2rem;text-align:center;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent);"></div>
+        <div style="width:72px;height:72px;border:1.5px solid rgba(201,168,76,0.5);border-radius:4px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;background:rgba(201,168,76,0.1);font-size:2rem;">💡</div>
+        <div style="font-family:'Cinzel',serif;font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:0.05em;margin-bottom:0.35rem;">KeenTech</div>
+        <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:1rem;">Odoo Developer & ERP Solutions</div>
+        <div style="width:40px;height:1px;background:rgba(201,168,76,0.4);margin:0 auto 1rem;"></div>
+        <p style="font-size:0.83rem;line-height:1.7;color:rgba(255,255,255,0.55);">Certified Odoo development partner delivering enterprise resource planning, supply chain automation, and digital transformation solutions across Iraq and the region.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="about-grid">
+    <div class="about-portrait">
+      <div class="about-portrait-frame" style="background:none;">
+        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=700&q=80" alt="Professional consultant at work" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.85) contrast(1.05);">
+        <div class="about-portrait-corner tl"></div>
+        <div class="about-portrait-corner tr"></div>
+        <div class="about-portrait-corner bl"></div>
+        <div class="about-portrait-corner br"></div>
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-num">20+</div>
+        <div class="about-badge-text">Years<br>Experience</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span>About Ahmed Hasan</span>
+      </div>
+      <h2 class="section-title">Driving Efficiency,<br><em>Ensuring Integrity</em></h2>
+      <p class="section-intro" style="margin-bottom:1.5rem;">
+        A senior consultant with over two decades of hands-on experience in supply chain management, logistics operations, procurement, and compliance. Based in Erbil, Kurdistan Region, Iraq, Ahmed brings deep expertise across multiple industries and international contexts.
+      </p>
+      <p style="font-size:0.88rem; line-height:1.8; color:rgba(255,255,255,0.55); margin-bottom:2rem;">
+        Fluent in English, Arabic, and Kurdish, Ahmed has led complex operational transformation programs for organizations ranging from multinational oil & gas companies to NGOs and trading firms. His approach combines analytical rigor with pragmatic implementation, ensuring compliance frameworks are both robust and operationally viable.
+      </p>
+      <div class="about-strengths">
+        <div class="strength-item"><div class="strength-dot"></div>Supply Chain Expertise</div>
+        <div class="strength-item"><div class="strength-dot"></div>Procurement Management</div>
+        <div class="strength-item"><div class="strength-dot"></div>Compliance & Controls</div>
+        <div class="strength-item"><div class="strength-dot"></div>Risk Management</div>
+        <div class="strength-item"><div class="strength-dot"></div>Leadership & Mentoring</div>
+        <div class="strength-item"><div class="strength-dot"></div>Multi-Country Exposure</div>
+        <div class="strength-item"><div class="strength-dot"></div>EN · AR · KU Languages</div>
+        <div class="strength-item"><div class="strength-dot"></div>Process Improvement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE STRIP -->
+<div style="width:100%; height:320px; overflow:hidden; position:relative;">
+  <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1800&q=80" alt="Container port logistics operations" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:brightness(0.45) saturate(0.7);">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,40,0.8) 0%,rgba(10,22,40,0.3) 50%,rgba(10,22,40,0.8) 100%);display:flex;align-items:center;justify-content:center;">
+    <div style="text-align:center;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:300;color:#fff;letter-spacing:0.04em;">"Driving Efficiency, Ensuring Integrity, Creating Value"</div>
+      <div style="width:60px;height:1px;background:#c9a84c;margin:1rem auto 0;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div id="services">
+  <div class="inner">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span>What I Offer</span>
+    </div>
+    <h2 class="section-title">Consulting <em>Services</em></h2>
+    <p class="section-intro">Comprehensive consulting engagements tailored to your organization's operational complexity and strategic objectives.</p>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 2.5rem;">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div style="width:100%;height:140px;margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;position:relative;">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=75" alt="Operational audit" style="width:calc(100% + 5rem);height:100%;object-fit:cover;filter:brightness(0.4) saturate(0.6);">
+          <div style="position:absolute;bottom:0.75rem;left:1rem;font-size:1.5rem;">🔍</div>
+        </div>
+        <h3 class="service-title">Operational Audit & Process Review</h3>
+        <p class="service-desc">Comprehensive end-to-end operational audits identifying inefficiencies, control gaps, and improvement opportunities across your business functions.</p>
+        <a href="#contact" class="service-link">Engage Now →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div style="width:100%;height:140px;margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;position:relative;">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=75" alt="Procurement contracts" style="width:calc(100% + 5rem);height:100%;object-fit:cover;filter:brightness(0.4) saturate(0.6);">
+          <div style="position:absolute;bottom:0.75rem;left:1rem;font-size:1.5rem;">📋</div>
+        </div>
+        <h3 class="service-title">Procurement & Contract Audit</h3>
+        <p class="service-desc">Rigorous review of procurement processes, vendor selection, contract terms, and compliance with internal policies and regulatory requirements.</p>
+        <a href="#contact" class="service-link">Engage Now →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div style="width:100%;height:140px;margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;position:relative;">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=75" alt="Warehouse inventory" style="width:calc(100% + 5rem);height:100%;object-fit:cover;filter:brightness(0.4) saturate(0.6);">
+          <div style="position:absolute;bottom:0.75rem;left:1rem;font-size:1.5rem;">📦</div>
+        </div>
+        <h3 class="service-title">Inventory & Warehouse Review</h3>
+        <p class="service-desc">Detailed assessment of inventory management systems, warehouse operations, stock accuracy, and cost optimization strategies.</p>
+        <a href="#contact" class="service-link">Engage Now →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div style="width:100%;height:140px;margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;position:relative;">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=600&q=75" alt="Logistics supply chain" style="width:calc(100% + 5rem);height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+          <div style="position:absolute;bottom:0.75rem;left:1rem;font-size:1.5rem;">🚢</div>
+        </div>
+        <h3 class="service-title">Logistics & Supply Chain Audit</h3>
+        <p class="service-desc">Strategic review of your entire supply chain network — from vendor performance to last-mile delivery — identifying risk and unlocking value.</p>
+        <a href="#contact" class="service-link">Engage Now →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div style="width:100%;height:140px;margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;position:relative;">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=75" alt="Compliance and controls" style="width:calc(100% + 5rem);height:100%;object-fit:cover;filter:brightness(0.4) saturate(0.6);">
+          <div style="position:absolute;bottom:0.75rem;left:1rem;font-size:1.5rem;">⚖️</div>
+        </div>
+        <h3 class="service-title">Compliance & Internal Controls</h3>
+        <p class="service-desc">Design and implementation of compliance frameworks, anti-corruption controls, and internal audit systems aligned with international best practices.</p>
+        <a href="#contact" class="service-link">Engage Now →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div style="width:100%;height:140px;margin:-2.5rem -2.5rem 1.5rem;overflow:hidden;position:relative;">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=75" alt="Process improvement team" style="width:calc(100% + 5rem);height:100%;object-fit:cover;filter:brightness(0.4) saturate(0.6);">
+          <div style="position:absolute;bottom:0.75rem;left:1rem;font-size:1.5rem;">⚙️</div>
+        </div>
+        <h3 class="service-title">SOP Development & Process Improvement</h3>
+        <p class="service-desc">Creation of clear, actionable Standard Operating Procedures and lean process redesign to drive efficiency, quality, and organizational consistency.</p>
+        <a href="#contact" class="service-link">Engage Now →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="reveal">
+  <div class="section-eyebrow">
+    <div class="section-eyebrow-line"></div>
+    <span>Sectors I Serve</span>
+  </div>
+  <h2 class="section-title">Industry <em>Expertise</em></h2>
+  <p class="section-intro">Deep sector knowledge across Iraq's most critical industries enables context-aware consulting that delivers real-world results.</p>
+  <div class="industries-grid">
+    <div class="industry-card" style="padding:0;overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;">
+      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&q=75" alt="Oil and gas" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+      <div style="position:relative;z-index:1;padding:1.5rem;width:100%;border-top:1px solid rgba(201,168,76,0.3);background:linear-gradient(0deg,rgba(10,22,40,0.9) 0%,transparent 100%);text-align:left;">
+        <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">🛢️</span>
+        <div class="industry-name">Oil & Gas Services</div>
+        <div class="industry-sub">Upstream · Midstream · Oilfield Services</div>
+      </div>
+    </div>
+    <div class="industry-card" style="padding:0;overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;">
+      <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&q=75" alt="Logistics freight" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+      <div style="position:relative;z-index:1;padding:1.5rem;width:100%;border-top:1px solid rgba(201,168,76,0.3);background:linear-gradient(0deg,rgba(10,22,40,0.9) 0%,transparent 100%);text-align:left;">
+        <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">🚛</span>
+        <div class="industry-name">Logistics & Freight</div>
+        <div class="industry-sub">Forwarding · Customs · Distribution</div>
+      </div>
+    </div>
+    <div class="industry-card" style="padding:0;overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=75" alt="Trading distribution" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+      <div style="position:relative;z-index:1;padding:1.5rem;width:100%;border-top:1px solid rgba(201,168,76,0.3);background:linear-gradient(0deg,rgba(10,22,40,0.9) 0%,transparent 100%);text-align:left;">
+        <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">🏪</span>
+        <div class="industry-name">Trading & Distribution</div>
+        <div class="industry-sub">Import · Export · Wholesale</div>
+      </div>
+    </div>
+    <div class="industry-card" style="padding:0;overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;">
+      <img src="https://images.unsplash.com/photo-1469571486292-b53601010376?w=500&q=75" alt="NGO humanitarian" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+      <div style="position:relative;z-index:1;padding:1.5rem;width:100%;border-top:1px solid rgba(201,168,76,0.3);background:linear-gradient(0deg,rgba(10,22,40,0.9) 0%,transparent 100%);text-align:left;">
+        <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">🌍</span>
+        <div class="industry-name">NGOs & Aid Organizations</div>
+        <div class="industry-sub">Humanitarian · Development · Compliance</div>
+      </div>
+    </div>
+    <div class="industry-card" style="padding:0;overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;">
+      <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&q=75" alt="Pharma healthcare" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+      <div style="position:relative;z-index:1;padding:1.5rem;width:100%;border-top:1px solid rgba(201,168,76,0.3);background:linear-gradient(0deg,rgba(10,22,40,0.9) 0%,transparent 100%);text-align:left;">
+        <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">💊</span>
+        <div class="industry-name">Pharma & Healthcare</div>
+        <div class="industry-sub">Cold Chain · Regulatory · Distribution</div>
+      </div>
+    </div>
+    <div class="industry-card" style="padding:0;overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=75" alt="Construction engineering" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35) saturate(0.6);">
+      <div style="position:relative;z-index:1;padding:1.5rem;width:100%;border-top:1px solid rgba(201,168,76,0.3);background:linear-gradient(0deg,rgba(10,22,40,0.9) 0%,transparent 100%);text-align:left;">
+        <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">🏗️</span>
+        <div class="industry-name">Construction & Engineering</div>
+        <div class="industry-sub">Project Procurement · Site Logistics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="reveal">
+  <div class="section-eyebrow">
+    <div class="section-eyebrow-line"></div>
+    <span>Credentials</span>
+  </div>
+  <h2 class="section-title">Certifications & <em>Training</em></h2>
+  <p class="section-intro">Professional development grounded in globally recognized frameworks and continuous learning.</p>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-badge">🏆</div>
+      <div>
+        <div class="cert-name">CSCP — Certified Supply Chain Professional</div>
+        <div class="cert-body">APICS (Association for Supply Chain Management)</div>
+        <div class="cert-status active">15+ Years</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge">⚖️</div>
+      <div>
+        <div class="cert-name">Compliance & Anti-Corruption Training</div>
+        <div class="cert-body">International Standards & Best Practices</div>
+        <div class="cert-status active">Practiced</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge">📜</div>
+      <div>
+        <div class="cert-name">Contract & Legal Management</div>
+        <div class="cert-body">Practical experience in contract drafting, negotiation & administration</div>
+        <div class="cert-status active">Experienced</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge">🔗</div>
+      <div>
+        <div class="cert-name">Supply Chain Management</div>
+        <div class="cert-body">Advanced professional training in SCM principles and practice</div>
+        <div class="cert-status active">Practiced</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge">🛢️</div>
+      <div>
+        <div class="cert-name">Oil & Gas Industry Expertise</div>
+        <div class="cert-body">Hands-on operational experience in oilfield services procurement & logistics</div>
+        <div class="cert-status active">10+ Years</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge">📊</div>
+      <div>
+        <div class="cert-name">Internal Audit & Controls</div>
+        <div class="cert-body">Operational audit methodology and internal controls framework design</div>
+        <div class="cert-status active">Practiced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources" class="reveal">
+  <div class="section-eyebrow">
+    <div class="section-eyebrow-line"></div>
+    <span>Professional Tools</span>
+  </div>
+  <h2 class="section-title">Downloadable <em>Resources</em></h2>
+  <p class="section-intro">Practical tools and templates developed from 20+ years of operational experience. Available for download upon request.</p>
+  <div class="resources-grid">
+    <div class="resource-card">
+      <span class="resource-icon">✅</span>
+      <div class="resource-title">Operational Audit Checklist</div>
+      <div class="resource-type">PDF Template</div>
+      <a href="#contact" class="resource-dl">Request →</a>
+    </div>
+    <div class="resource-card">
+      <span class="resource-icon">📝</span>
+      <div class="resource-title">SOP Template Pack</div>
+      <div class="resource-type">Word / PDF</div>
+      <a href="#contact" class="resource-dl">Request →</a>
+    </div>
+    <div class="resource-card">
+      <span class="resource-icon">📊</span>
+      <div class="resource-title">Procurement Evaluation Form</div>
+      <div class="resource-type">Excel Template</div>
+      <a href="#contact" class="resource-dl">Request →</a>
+    </div>
+    <div class="resource-card">
+      <span class="resource-icon">🛡️</span>
+      <div class="resource-title">Compliance Control Framework</div>
+      <div class="resource-type">PDF Guide</div>
+      <a href="#contact" class="resource-dl">Request →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT VISUAL BAND -->
+<div style="width:100%;height:260px;overflow:hidden;position:relative;">
+  <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1800&q=80" alt="Professional consulting office" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(0.35) saturate(0.6);">
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;">
+    <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:#c9a84c;">Ready to Work Together?</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:300;color:#fff;text-align:center;padding:0 1rem;">Let's Discuss Your Project</div>
+    <a href="#contact" style="margin-top:0.5rem;background:#c9a84c;color:#0a1628;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 2rem;text-decoration:none;transition:all 0.3s;">Get in Touch →</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact">
+  <div class="inner">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span>Get in Touch</span>
+    </div>
+    <h2 class="section-title">Start a <em>Conversation</em></h2>
+    <p class="section-intro">Ready to discuss how I can help your organization optimize operations, strengthen compliance, or improve procurement? Reach out today.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Erbil, Kurdistan Region, Iraq</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">hello@ahmedhasan.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+964 7XX XXX XXXX</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value"><a href="https://www.linkedin.com/in/ahmed-hasan-79502415a/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.4);transition:color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='inherit'">linkedin.com/in/ahmed-hasan-79502415a</a></div>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border); padding:1.5rem; background:var(--card-bg);">
+          <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">Preferred Domain</div>
+          <div style="font-family:'Cinzel',serif; font-size:1.1rem; color:var(--white);">AhmedHasan.com</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.25rem;">Also: AhmedHasanIQ.com · AhmedHasanConsulting.com</div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organization</label>
+            <input type="text" class="form-input" placeholder="Your company">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" placeholder="+964 7XX...">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service of Interest</label>
+          <select class="form-input form-select" style="appearance:none; cursor:pointer; background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23c9a84c' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E\"); background-repeat:no-repeat; background-position:right 12px center; background-size:20px;">
+            <option value="" style="background:#0f2040;">Select a service...</option>
+            <option value="audit" style="background:#0f2040;">Operational Audit & Process Review</option>
+            <option value="procurement" style="background:#0f2040;">Procurement & Contract Audit</option>
+            <option value="inventory" style="background:#0f2040;">Inventory & Warehouse Review</option>
+            <option value="logistics" style="background:#0f2040;">Logistics & Supply Chain Audit</option>
+            <option value="compliance" style="background:#0f2040;">Compliance & Internal Controls</option>
+            <option value="sop" style="background:#0f2040;">SOP Development & Process Improvement</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Describe your project or challenge briefly..."></textarea>
+        </div>
+        <button class="form-submit">Send Message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Ahmed <span>Hasan</span></div>
+      <p class="footer-tagline">Supply Chain · Operations · Compliance<br>Driving Efficiency, Ensuring Integrity, Creating Value</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ahmed-hasan-79502415a/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
+        <a href="#" class="social-link" title="Email">@</a>
+        <a href="#" class="social-link" title="Phone">☎</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Operational Audit</a></li>
+        <li><a href="#services">Procurement Audit</a></li>
+        <li><a href="#services">Logistics Review</a></li>
+        <li><a href="#services">Compliance Controls</a></li>
+        <li><a href="#services">SOP Development</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Industries</div>
+      <ul class="footer-links">
+        <li><a href="#industries">Oil & Gas</a></li>
+        <li><a href="#industries">Logistics</a></li>
+        <li><a href="#industries">Trading</a></li>
+        <li><a href="#industries">NGOs</a></li>
+        <li><a href="#industries">Healthcare</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Credentials</a></li>
+        <li><a href="#articles">Insights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">© 2025 Ahmed Hasan. All rights reserved. Erbil, Kurdistan Region, Iraq.</div>
+    <div class="footer-domain">AhmedHasan.com</div>
+  </div>
+</footer>
+
+<script>
+  // NAV SCROLL
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // MOBILE MENU
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+
+  // COUNTER ANIMATION
+  function animateCounter(el, target, duration = 2000) {
+    const start = performance.now();
+    const update = (time) => {
+      const elapsed = time - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + (target >= 20 ? '+' : '');
+      if (progress < 1) requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+
+  // INTERSECTION OBSERVER
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Counter els
+        entry.target.querySelectorAll('[data-target]').forEach(el => {
+          animateCounter(el, parseInt(el.dataset.target));
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Counter strip
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('[data-target]').forEach(el => {
+          animateCounter(el, parseInt(el.dataset.target));
+        });
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.counter-strip').forEach(el => counterObserver.observe(el));
+
+  // Hero counters
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('[data-target]').forEach(el => {
+          animateCounter(el, parseInt(el.dataset.target));
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) heroObserver.observe(heroStats);
+</script>
+</body>
+</html>
